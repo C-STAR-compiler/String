@@ -8,13 +8,13 @@
 
 #include "string.export.h"
 
-#define LIB_EXPORT STRING_EXPORT
+#define PUBLIC STRING_EXPORT
 #define TYPENAME CutException
 
 OBJECT (const char *message, ...) INHERIT (Exception)
 END_OBJECT("An error occured!");
 
 #undef TYPENAME
-#undef LIB_EXPORT
+#undef PUBLIC
 
 #endif

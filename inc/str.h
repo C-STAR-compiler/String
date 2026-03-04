@@ -15,38 +15,38 @@
 #include "string.export.h"
 
 // A string of characters, with length
-#define LIB_EXPORT STRING_EXPORT
+#define PUBLIC STRING_EXPORT
 #define TYPENAME String
 
 OBJECT (const char*) INHERIT (char*)
   int   length;
 END_OBJECT("");
 
-STRING_EXPORT String *_(Concat)(String *other);
-STRING_EXPORT String *_(Cat)(const char *other);
-STRING_EXPORT String *_(Append)(char c);
-STRING_EXPORT String *_(Prepend)(char c);
-STRING_EXPORT String *_(Insert)(int index, char c);
-STRING_EXPORT String *_(SubString)(int start, int length);
-STRING_EXPORT String *_(Trim)();
-STRING_EXPORT String *_(ToLower)();
-STRING_EXPORT String *_(ToUpper)();
+PUBLIC String *_(Concat)(String *other);
+PUBLIC String *_(Cat)(const char *other);
+PUBLIC String *_(Append)(char c);
+PUBLIC String *_(Prepend)(char c);
+PUBLIC String *_(Insert)(int index, char c);
+PUBLIC String *_(SubString)(int start, int length);
+PUBLIC String *_(Trim)();
+PUBLIC String *_(ToLower)();
+PUBLIC String *_(ToUpper)();
 
-STRING_EXPORT String *CONST (Copy)();
+PUBLIC String *CONST (Copy)();
 
-STRING_EXPORT int CONST (Equals)(const String *other);
-STRING_EXPORT int CONST (Eq)(const char *other);
-STRING_EXPORT int CONST (Compare)(const String *other);
-STRING_EXPORT int CONST (Cmp)(const char *other);
-STRING_EXPORT int CONST (Contains)(const String *other);
-STRING_EXPORT int CONST (Cnt)(const char *other);
-STRING_EXPORT int CONST (StartsWith)(const char *other);
-STRING_EXPORT int CONST (EndsWith)(const char *other);
+PUBLIC int CONST (Equals)(const String *other);
+PUBLIC int CONST (Eq)(const char *other);
+PUBLIC int CONST (Compare)(const String *other);
+PUBLIC int CONST (Cmp)(const char *other);
+PUBLIC int CONST (Contains)(const String *other);
+PUBLIC int CONST (Cnt)(const char *other);
+PUBLIC int CONST (StartsWith)(const char *other);
+PUBLIC int CONST (EndsWith)(const char *other);
 
-STRING_EXPORT String *STATIC (Format)(const char *format, ...);
-STRING_EXPORT String *STATIC (ToString)(const void *object);
-STRING_EXPORT String *STATIC (ToStringType)(const void *object, const Type *type);
-STRING_EXPORT String *STATIC (ToStringFormat)(const void *object, const Type *type, const char *format);
+PUBLIC String *STATIC (Format)(const char *format, ...);
+PUBLIC String *STATIC (ToString)(const void *object);
+PUBLIC String *STATIC (ToStringType)(const void *object, const Type *type);
+PUBLIC String *STATIC (ToStringFormat)(const void *object, const Type *type, const char *format);
 
 FOREIGN_VIRTUAL(ToString,    String_Copy);
 FOREIGN_VIRTUAL(KeyComparer, String_Cmp);
