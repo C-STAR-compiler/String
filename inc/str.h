@@ -53,5 +53,5 @@ FOREIGN_VIRTUAL(KeyComparer, String_Cmp);
 FOREIGN_VIRTUAL(Comparer,    String_Compare);
 
 #undef TYPENAME
-#undef LIB_EXPORT
+#undef PUBLIC
 #endif
