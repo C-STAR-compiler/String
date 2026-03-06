@@ -13,15 +13,17 @@
 #include "string.export.h"
 
 // Static Class
+#define PUBLIC STRING_EXPORT
 #define TYPENAME Path
 
-STRING_EXPORT String *STATIC (File)(const char *path);
-STRING_EXPORT String *STATIC (FileName)(const char *path);
-STRING_EXPORT String *STATIC (Extension)(const char *path);
-STRING_EXPORT String *STATIC (Folder)(const char *path);
-STRING_EXPORT String *STATIC (Combine)(const char *path, const char *file);
+PUBLIC String *STATIC (File)(const char *path);
+PUBLIC String *STATIC (FileName)(const char *path);
+PUBLIC String *STATIC (Extension)(const char *path);
+PUBLIC String *STATIC (Folder)(const char *path);
+PUBLIC String *STATIC (Combine)(const char *path, const char *file);
 
 #undef TYPENAME
+#undef PUBLIC
 #endif
 
 #endif
